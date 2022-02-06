@@ -24,7 +24,7 @@ label {
 }
 
 .hero {
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
 .menu a {
@@ -46,6 +46,7 @@ h4 {
 .contact-info,
 p {
     color: var(--secondary-color);
+    text-align: center;
 }
 
 header {

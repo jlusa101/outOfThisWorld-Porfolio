@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#header").fadeIn(1500);
+    $("#header").fadeIn(1000);
 });
 
 $(document).ready(function() {
