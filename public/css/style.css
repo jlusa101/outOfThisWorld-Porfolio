@@ -21,10 +21,11 @@ label {
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     color: var(--secondary-color);
+    text-align: center;
 }
 
 .hero {
-    margin-top: 300px;
+    margin-top: 280px;
 }
 
 .menu a {
@@ -43,10 +44,8 @@ h4 {
     color: var(--primary-color);
 }
 
-.contact-info,
-p {
+.contact-info p span {
     color: var(--secondary-color);
-    text-align: center;
 }
 
 header {
@@ -71,4 +70,9 @@ footer {
 .fa {
     font-size: 25px;
     color: var(--secondary-color);
+}
+
+.contact-info {
+    margin-top: 80px;
+    margin-bottom: 40px;
 }

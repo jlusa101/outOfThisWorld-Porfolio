@@ -9,3 +9,10 @@ $(document).ready(function() {
         $(this).css({ "border-bottom": "none" });
     })
 });
+
+$(document).ready(function() {
+    $("#contact-link").click(function() {
+        $("#header").css({ "display": "none" });
+        $("#contact").slideDown("slow");
+    });
+});
