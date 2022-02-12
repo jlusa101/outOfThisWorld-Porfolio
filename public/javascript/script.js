@@ -1,7 +1,3 @@
-// $(document).ready(function() {
-//     $("#header").fadeIn(1000);
-// });
-
 $(document).ready(function() {
     $("#header").fadeIn(1000);
 
@@ -11,12 +7,24 @@ $(document).ready(function() {
         $(this).css({ "border-bottom": "none" });
     })
 
+    $("#about-link").click(function() {
+        $("#header").css({ "display": "none" });
+        $("#contact").css({ "display": "none" });
+        $("#work").css({ "display": "none" });
+        $("#about").slideDown("slow");
+    });
+
+    $("#work-link").click(function() {
+        $("#header").css({ "display": "none" });
+        $("#about").css({ "display": "none" });
+        $("#contact").css({ "display": "none" });
+        $("#work").slideDown("slow");
+    });
+
     $("#contact-link").click(function() {
         $("#header").css({ "display": "none" });
+        $("#about").css({ "display": "none" });
+        $("#work").css({ "display": "none" });
         $("#contact").slideDown("slow");
     });
 });
-
-// $(document).ready(function() {
-
-// });
