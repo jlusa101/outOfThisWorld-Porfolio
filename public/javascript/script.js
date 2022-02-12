@@ -1,3 +1,5 @@
+var form = document.getElementById("my-form");
+
 $(document).ready(function() {
     $("#header").fadeIn(1000);
 
@@ -22,6 +24,7 @@ $(document).ready(function() {
     });
 
     $("#contact-link").click(function() {
+        form.reset();
         $("#header").css({ "display": "none" });
         $("#about").css({ "display": "none" });
         $("#work").css({ "display": "none" });
@@ -30,14 +33,12 @@ $(document).ready(function() {
 
 });
 
-var form = document.getElementById("my-form");
-
 // Handles form submissions and sends myself an email from the user 
-async function handleSubmit(event) {
-    event.preventDefault();
+async function handleSubmit(e) {
+    e.preventDefault();
     var status = document.getElementById("form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
+    var data = new FormData(e.target);
+    fetch(e.target.action, {
         method: form.method,
         body: data,
         headers: {
@@ -50,13 +51,13 @@ async function handleSubmit(event) {
         } else {
             response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
-                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    status.innerHTML = data["errors"].map(err => err["message"]).join(", ")
                 } else {
                     status.innerHTML = "Oops! There was a problem sending your email";
                 }
             })
         }
-    }).catch(error => {
+    }).catch(err => {
         status.innerHTML = "Oops! There was a problem sending your email";
     });
 

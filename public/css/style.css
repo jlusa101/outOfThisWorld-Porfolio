@@ -15,7 +15,8 @@ body {
 
 h1,
 h2,
-h4 {
+h4,
+span {
     color: var(--primary-color);
 }
 
@@ -35,12 +36,8 @@ h4 {
 
 .menu a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--secondary-color);
-}
-
-span {
-    color: var(--primary-color);
 }
 
 
@@ -49,7 +46,6 @@ span {
 header {
     position: fixed;
     top: 0;
-    background-color: #3f556d;
     width: 100%;
 }
 
@@ -73,6 +69,24 @@ footer a {
 
 #about h2 {
     text-align: left;
+}
+
+
+/* Work */
+
+.card {
+    margin: 0 5px 0 0;
+    height: 200px;
+}
+
+#first-project {
+    background-image: url('../images/group-pro.jpg');
+    background-size: cover;
+}
+
+#second-project {
+    background-image: url('../images/bike_haven.JPG');
+    background-size: cover;
 }
 
 
